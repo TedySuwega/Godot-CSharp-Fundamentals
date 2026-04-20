@@ -222,6 +222,7 @@ radius = 5.0
 height = 14.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2010864684 node_paths=PackedStringArray("PlayerVisuals")]
+light_mask = 2
 z_index = 5
 script = ExtResource("1_g2els")
 PlayerVisuals = NodePath("AnimatedSprite2D")

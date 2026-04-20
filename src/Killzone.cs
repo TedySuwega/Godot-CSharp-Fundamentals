@@ -8,6 +8,13 @@ public partial class Killzone : Area2D
 	
 	public void _on_body_entered(Node2D body)
 	{
+
+		// Automatically find a child named "Timer" if one isn't assigned
+		if (KillTimer == null)
+		{
+			KillTimer = GetNode<Timer>("Timer");
+		}
+		
 		if (body is Player)
 		{
 			GD.Print("Dead!!");
