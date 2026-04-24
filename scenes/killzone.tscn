@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://dyjw0x1auc74s"]
 
 [ext_resource type="Script" uid="uid://daqt1ivm8wgqp" path="res://src/Killzone.cs" id="1_xlapc"]
+[ext_resource type="AudioStream" uid="uid://diert60kn3ky8" path="res://assets/sounds/explosion.wav" id="2_kl8fp"]
 
-[node name="killzone" type="Area2D" unique_id=410148633 node_paths=PackedStringArray("KillTimer")]
+[node name="killzone" type="Area2D" unique_id=410148633 node_paths=PackedStringArray("KillTimer", "KilledSound")]
 script = ExtResource("1_xlapc")
 KillTimer = NodePath("Timer")
+KilledSound = NodePath("KilledSound")
 
 [node name="Timer" type="Timer" parent="." unique_id=1628685163]
 process_mode = 3
+
+[node name="KilledSound" type="AudioStreamPlayer2D" parent="." unique_id=425504581]
+stream = ExtResource("2_kl8fp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -21,7 +21,7 @@ public partial class Slime : Node2D
 			// Only flip if the thing we hit is NOT the Player
 			if (collider is not Player) 
 			{
-				GD.Print("Hit a Wall! Turning...");
+				GD.Print("[Slime] Obstacle on right ray (not player), turn left, FlipH=true");
 				_direction = -1;
 				_animatedSprite.FlipH = true;
 			}
@@ -37,7 +37,7 @@ public partial class Slime : Node2D
 			// Only flip if the thing we hit is NOT the Player
 			if (collider is not Player) 
 			{
-				GD.Print("Hit a Wall! Turning...");
+				GD.Print("[Slime] Obstacle on left ray (not player), turn right, FlipH=false");
 				_direction = 1;
 				_animatedSprite.FlipH = false;
 			}

@@ -29,13 +29,13 @@ public partial class SlimePurple : CharacterBody2D // Make sure this matches you
 		
 		if (_direction == 1 && _rayCastRight != null && _rayCastRight.IsColliding())
 		{
-			GD.Print("Hit Right Wall! Turning Left..."); // Add this
+			GD.Print("[SlimePurple] Right wall hit, direction -> -1 (face left)");
 			_direction = -1;
 			if (_animatedSprite != null) _animatedSprite.FlipH = true;
 		}
 		else if (_direction == -1 && _rayCastLeft != null && _rayCastLeft.IsColliding())
 		{
-			GD.Print("Hit Left Wall! Turning Right..."); // Add this
+			GD.Print("[SlimePurple] Left wall hit, direction -> 1 (face right)");
 			_direction = 1;
 			if (_animatedSprite != null) _animatedSprite.FlipH = false;
 		}

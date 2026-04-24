@@ -7,7 +7,7 @@ public partial class Player : CharacterBody2D
 	[Export] public float Speed = 130.0f;
 	[Export] public float JumpVelocity = -300.0f;
 	[Export] public AnimatedSprite2D PlayerVisuals;
-
+	[Export] public AudioStreamPlayer2D JumpSound;
 	// Use a field so all methods can access the current velocity
 	private Vector2 _velocity;
 
@@ -39,6 +39,7 @@ public partial class Player : CharacterBody2D
 		if (Input.IsActionJustPressed("jump") && IsOnFloor())
 		{
 			_velocity.Y = JumpVelocity;
+			JumpSound?.Play();
 		}
 	}
 
@@ -72,7 +73,7 @@ public partial class Player : CharacterBody2D
 		{
 			PlayerVisuals.FlipH = directionX < 0;
 		}
-		
+
 		// 2. Handle Animations
 		if (IsOnFloor())
 		{
@@ -87,7 +88,6 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
-			// Use Capital 'P' for Play
 			PlayerVisuals.Play("jump");
 		}
 	}
