@@ -565,15 +565,50 @@ sources/0 = SubResource("TileSetAtlasSource_p57ef")
 
 [node name="Game" type="Node2D" unique_id=1280002426]
 
+[node name="ParalaxBG" type="Node" parent="." unique_id=864639427]
+
+[node name="Parallax2D" type="Parallax2D" parent="ParalaxBG" unique_id=599208406]
+repeat_size = Vector2(1465, 0)
+repeat_times = 2
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParalaxBG/Parallax2D" unique_id=1044749693]
+position = Vector2(1395, -300)
+scale = Vector2(2.546875, 2.9722223)
+texture = ExtResource("10_kvuet")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParalaxBG" unique_id=1086478009]
+scroll_scale = Vector2(1.2, 1.2)
+repeat_size = Vector2(1728, 0)
+repeat_times = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParalaxBG/Parallax2D2" unique_id=386381069]
+position = Vector2(1386, -356)
+scale = Vector2(3, 3)
+texture = ExtResource("11_trtic")
+
+[node name="Parallax2D3" type="Parallax2D" parent="ParalaxBG" unique_id=1921098235]
+scroll_scale = Vector2(0.8, 0.8)
+repeat_size = Vector2(2300, 0)
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParalaxBG/Parallax2D3" unique_id=1493163232]
+position = Vector2(-573, -177)
+scale = Vector2(2, 2)
+texture = ExtResource("12_ir15t")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParalaxBG/Parallax2D3" unique_id=1195067160]
+position = Vector2(576, -177)
+scale = Vector2(2, 2)
+texture = ExtResource("12_ir15t")
+
 [node name="GameManager" type="Node" parent="." unique_id=1735952675 node_paths=PackedStringArray("ScoreLabel")]
 script = ExtResource("1_dinhu")
 ScoreLabel = NodePath("ScoreLabel")
 
 [node name="ScoreLabel" type="Label" parent="GameManager" unique_id=818594826]
-offset_left = -277.0
-offset_top = -333.0
-offset_right = -180.0
-offset_bottom = -300.0
+offset_left = -234.0
+offset_top = -384.0
+offset_right = -137.0
+offset_bottom = -351.0
 theme_override_fonts/font = ExtResource("2_kvuet")
 theme_override_font_sizes/font_size = 8
 text = "You colected X of 100 coins. "
@@ -1128,50 +1163,14 @@ theme_override_font_sizes/font_size = 8
 text = "touch the slime will died"
 
 [node name="Label4" type="Label" parent="Label5" unique_id=1087613676]
-offset_left = -217.0
-offset_top = -363.0
-offset_right = -64.0
-offset_bottom = -344.0
+offset_left = -233.0
+offset_top = -340.0
+offset_right = -80.0
+offset_bottom = -321.0
 theme_override_fonts/font = ExtResource("8_gee14")
 theme_override_font_sizes/font_size = 8
 text = "all done !!
 for the demo"
-
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=599208406]
-visible = false
-repeat_size = Vector2(1465, 0)
-repeat_times = 2
-
-[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D" unique_id=1044749693]
-position = Vector2(1395, -300)
-scale = Vector2(2.546875, 2.9722223)
-texture = ExtResource("10_kvuet")
-
-[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1086478009]
-visible = false
-scroll_scale = Vector2(1.2, 1.2)
-repeat_size = Vector2(1728, 0)
-repeat_times = 2
-
-[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D2" unique_id=386381069]
-position = Vector2(1386, -356)
-scale = Vector2(3, 3)
-texture = ExtResource("11_trtic")
-
-[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1921098235]
-visible = false
-scroll_scale = Vector2(0.8, 0.8)
-repeat_size = Vector2(2300, 0)
-
-[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D3" unique_id=1493163232]
-position = Vector2(-573, -177)
-scale = Vector2(2, 2)
-texture = ExtResource("12_ir15t")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Parallax2D3" unique_id=1195067160]
-position = Vector2(576, -177)
-scale = Vector2(2, 2)
-texture = ExtResource("12_ir15t")
 
 [node name="MusicBG" type="AudioStreamPlayer2D" parent="." unique_id=1048558328]
 stream = ExtResource("14_trtic")
